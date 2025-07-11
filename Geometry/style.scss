@@ -1,0 +1,203 @@
+// Variables
+$primary-color: #00d4ff;
+$secondary-color: #0099cc;
+$success-color: #00ff88;
+$text-light: #ccc;
+$white: white;
+$black: black;
+
+// Gradients
+$background-gradient: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+$button-gradient: linear-gradient(45deg, $primary-color, $secondary-color);
+$button-hover-gradient: linear-gradient(45deg, $secondary-color, $primary-color);
+
+// Spacing
+$spacing-xs: 2px;
+$spacing-sm: 4px;
+$spacing-md: 8px;
+$spacing-lg: 15px;
+$spacing-xl: 20px;
+
+// Border radius
+$border-radius-sm: 8px;
+$border-radius-md: 10px;
+$border-radius-lg: 15px;
+
+// Transitions
+$transition-fast: 0.1s ease-out;
+$transition-normal: 0.2s ease;
+$transition-slow: 0.3s ease;
+
+// Mixins
+@mixin glass-effect {
+    background: rgba($black, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba($white, 0.1);
+    box-shadow: 0 8px 32px rgba($black, 0.3);
+}
+
+@mixin button-style {
+    background: $button-gradient;
+    border: none;
+    color: $white;
+    padding: $spacing-md 16px;
+    border-radius: $border-radius-sm;
+    cursor: pointer;
+    font-size: 12px;
+    margin: $spacing-sm $spacing-xs;
+    transition: all $transition-slow;
+    white-space: nowrap;
+    
+    &:hover {
+        background: $button-hover-gradient;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba($primary-color, 0.4);
+    }
+    
+    &:active {
+        transform: scale(0.95);
+        box-shadow: 0 0 5px rgba($primary-color, 0.7);
+    }
+}
+
+@mixin slider-style {
+    width: 180px;
+    margin-right: 10px;
+    -webkit-appearance: none;
+    height: 4px;
+    background: $secondary-color;
+    outline: none;
+    border-radius: 2px;
+    
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: $primary-color;
+        cursor: grab;
+        box-shadow: 0 0 5px rgba($primary-color, 0.7);
+        transition: background $transition-normal, transform $transition-fast;
+        
+        &:active {
+            cursor: grabbing;
+            transform: scale(1.2);
+        }
+    }
+}
+
+// Keyframes
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 10px rgba($primary-color, 0.5); }
+    to { box-shadow: 0 0 20px rgba($primary-color, 0.8); }
+}
+
+// Base styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: $background-gradient;
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    overflow: hidden;
+    color: $white;
+}
+
+// Layout
+#canvas-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+// Controls panel
+#controls {
+    position: absolute;
+    top: $spacing-xl;
+    left: $spacing-xl;
+    @include glass-effect;
+    border-radius: $border-radius-lg;
+    padding: $spacing-xl;
+    z-index: 100;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.control-group {
+    margin-bottom: $spacing-lg;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed rgba($white, 0.1);
+    
+    &:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 14px;
+        color: $primary-color;
+        font-weight: 500;
+    }
+    
+    input[type="range"] {
+        @include slider-style;
+    }
+    
+    button {
+        @include button-style;
+    }
+    
+    span {
+        transition: transform $transition-fast, color $transition-fast;
+        display: inline-block;
+    }
+}
+
+// Info panel
+#info {
+    position: absolute;
+    bottom: $spacing-xl;
+    left: $spacing-xl;
+    background: rgba($black, 0.7);
+    padding: $spacing-lg;
+    border-radius: $border-radius-md;
+    font-size: 14px;
+    color: $text-light;
+    max-width: 300px;
+}
+
+// Stats panel
+#stats {
+    position: absolute;
+    top: $spacing-xl;
+    right: $spacing-xl;
+    background: rgba($black, 0.8);
+    padding: $spacing-lg;
+    border-radius: $border-radius-md;
+    font-size: 14px;
+    color: $success-color;
+    min-width: 150px;
+    
+    div span {
+        transition: color $transition-fast, transform $transition-fast;
+        display: inline-block;
+    }
+}
+
+// Utility classes
+.glow {
+    animation: glow 2s ease-in-out infinite alternate;
+}
