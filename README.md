@@ -1,16 +1,17 @@
+
 # Two-Zenther Project
 
 <div align="center">
   <img src="https://github.com/Zentheriun/Zentheriun/blob/main/Resources/.IMGs/Web%20-%20Studio%20Zentheriun.png" alt="Studio Zentheriun Preview" width="350"/>
   <img src="https://github.com/Zentheriun/Zentheriun/blob/main/Resources/.IMGs/Web%20-%20Proxima%20B.png" alt="Proxima B Preview" width="350"/>
   <br>
-  <em>A cutting-edge platform that redefines project management and space exploration through immersive 3D web experiences.</em>
+  <em>A cutting-edge platform redefining project management and space exploration through immersive 3D web experiences.</em>
 </div>
 
 <div align="center">
 
 [![Build Status](https://img.shields.io/badge/Build-Passed-brightgreen?style=for-the-badge)](https://github.com/Zentheriun/Two-Zenther/actions)
-[![Netlify Deployment](https://img.shields.io/badge/Deployed-Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://two-zenther.netlify.app/)
+[![Netlify Deploy](https://img.shields.io/badge/Deployed-Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://two-zenther.netlify.app/)
 [![License](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-blue?style=for-the-badge)](http://creativecommons.org/licenses/by-nc-nd/4.0/)
 [![GitHub-top-language](https://img.shields.io/github/languages/top/Zentheriun/Two-Zenther?style=for-the-badge)](https://github.com/Zentheriun/Two-Zenther/)
 
@@ -29,20 +30,20 @@
 
 ## 🚀 Project Overview
 
-**Two-Zenther** is an innovative **frontend development** platform that masterfully combines two distinct yet synergistic concepts: "Studio Zentheriun", a visual interface for project and workflow management, and "Proxima B", an immersive space exploration experience powered by 3D graphics.
+**Two-Zenther** is an innovative **frontend development** platform that masterfully blends two distinct but synergistic concepts: "Studio Zentheriun", a visual interface for managing projects and workflows, and "Proxima B", an immersive space exploration experience powered by 3D graphics.
 
-This project not only demonstrates the ability to build highly complex and interactive web applications but also sets a new standard in integrating advanced frontend technologies to deliver an unparalleled user experience in both functionality and visual impact.
+This project not only showcases the ability to build highly complex and interactive web applications but also sets a new benchmark in integrating advanced frontend technologies to deliver an unprecedented user experience in both functionality and visual impact.
 
 ---
 
 ## ✨ Key Features
 
 - **Dual Functional Nature**: `Studio Zentheriun` + `Proxima B`
-- **Cutting-Edge 3D Interactivity** with **Three.js**
+- **Cutting-edge 3D Interactivity** with **Three.js**
 - **Superior UI/UX Design**
 - **Cinematic Animations**
-- **Responsive and Adaptive Architecture**
-- **Modern Frontend Stack**
+- **Adaptive and Responsive Architecture**
+- **Advanced Frontend Stack**
 
 ---
 
@@ -62,32 +63,49 @@ This project not only demonstrates the ability to build highly complex and inter
 ## 📂 Project Structure
 
 ```
-📁 Two-Zenther/
-├── public/
-│   └── assets/images/
-├── src/
-│   ├── assets/images/
-│   ├── assets/models/
-│   ├── js/
-│   │   ├── modules/three-setup.js
-│   │   └── main.js
-│   ├── styles/
-│   │   ├── base/_reset.scss
-│   │   ├── base/_variables.scss
-│   │   ├── components/_footer.scss
-│   │   ├── components/_navbar.scss
-│   │   ├── pages/_home.scss
-│   │   └── main.scss
+📁 TWO-ZENTHER/
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       ├── index.js
+│       ├── Geometry/
+│       ├── add/
+│       │   ├── control-properties/
+│       │   └── physicsControls.js
+│       ├── figures/
+│       │   └── figures.js
+│       ├── maps/
+│       │   └── maps.js
+│       ├── index.html
+│       ├── script.js
+│       └── style.scss
+├── node_modules/
+│   ├── .bin/
+│   ├── @esbuild/
+│   ├── @rollup/
+│   ├── @types/
+│   ├── esbuild/
+│   ├── fdir/
+│   ├── nanoid/
+│   ├── picocolors/
+│   ├── picomatch/
+│   ├── postcss/
+│   ├── rollup/
+│   ├── source-map-js/
+│   ├── three/
+│   ├── tinylobby/
+│   └── vite/
 ├── index.html
-├── package.json
+├── LICENSE
 ├── package-lock.json
-├── vite.config.js
+├── package.json
 └── README.md
 ```
 
 ---
 
-## 💻 Local Setup Guide
+## 💻 Local Development Guide
 
 ### Prerequisites
 - Node.js and npm
@@ -101,7 +119,7 @@ npm install
 npm run dev
 ```
 
-Then open your browser and navigate to `http://localhost:5173`.
+Access in your browser at `http://localhost:5173`.
 
 ---
 
@@ -111,24 +129,24 @@ Then open your browser and navigate to `http://localhost:5173`.
 
 ---
 
-## 📈 Performance & Compatibility
+## 📈 Performance and Compatibility
 
 Optimized for:
 - Fast loading
-- Efficient 3D rendering
+- Efficient 3D graphics
 - Chrome, Firefox, Safari, Edge
-- All screen resolutions
+- All resolutions
 
 ---
 
-## 🤝 Contribution Guidelines
+## 🤝 Contributions
 
-1. Fork this repo
+1. Fork
 2. Create a branch
 3. Make your changes
-4. Write atomic commits
-5. Push your branch
-6. Open a Pull Request
+4. Atomic commit
+5. Push
+6. Pull Request
 
 ---
 
@@ -139,14 +157,14 @@ Optimized for:
 **Summary:**
 - ✅ Share
 - 🔗 Attribution
-- 🚫 NonCommercial
-- ❌ NoDerivatives
+- 🚫 Non-commercial
+- ❌ No derivatives
 
 © 2025 Santiago Yate — All rights reserved.
 
 ---
 
-## 👨‍💻 Lead Developer
+## 👨‍💻 Lead Author
 
 **Santiago Yate** — *Full Stack Developer*
 
@@ -167,6 +185,6 @@ Optimized for:
 ---
 
 <div align="center">
-  <strong>⭐ If you found this project interesting, helpful, or inspiring, please consider giving it a star!</strong><br>
-  <em>Two-Zenther: A showcase of advanced frontend development skills with 3D integration.</em>
+  <strong>⭐ If you liked this project, consider giving it a star!</strong><br>
+  <em>Two-Zenther: A showcase of advanced frontend skills with 3D integration.</em>
 </div>
