@@ -63,7 +63,7 @@ This project not only showcases the ability to build highly complex and interact
 ## 📂 Project Structure
 
 ```
-📁 TWO-ZENTHER/
+📁 ZENTHER-II/
 ├── assets/
 │   ├── css/
 │   │   └── style.css
@@ -113,8 +113,8 @@ This project not only showcases the ability to build highly complex and interact
 ### Steps
 
 ```bash
-git clone https://github.com/Zentheriun/Two-Zenther.git
-cd Two-Zenther
+git clone https://github.com/Zentheriun/Zenther-II.git
+cd Zenther-II
 npm install
 npm run dev
 ```
@@ -125,7 +125,7 @@ Access in your browser at `http://localhost:5173`.
 
 ## 🌐 Live Demo
 
-👉 [https://two-zenther.netlify.app/](https://two-zenther.netlify.app/)
+👉 [https://zenther-ii.netlify.app/](https://two-zenther.netlify.app/)
 
 ---
 
