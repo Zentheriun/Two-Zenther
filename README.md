@@ -1,5 +1,5 @@
 
-# Two-Zenther Project
+# ZENTHER-II Project
 
 <div align="center">
   <img src="https://github.com/Zentheriun/Zentheriun/blob/main/Resources/.IMGs/Web%20-%20Studio%20Zentheriun.png" alt="Studio Zentheriun Preview" width="350"/>
