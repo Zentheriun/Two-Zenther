@@ -30,7 +30,7 @@
 
 ## 🚀 Project Overview
 
-**Two-Zenther** is an innovative **frontend development** platform that masterfully blends two distinct but synergistic concepts: "Studio Zentheriun", a visual interface for managing projects and workflows, and "Proxima B", an immersive space exploration experience powered by 3D graphics.
+**Zenther-II** is an innovative **frontend development** platform that masterfully blends two distinct but synergistic concepts: "Studio Zentheriun", a visual interface for managing projects and workflows, and "Proxima B", an immersive space exploration experience powered by 3D graphics.
 
 This project not only showcases the ability to build highly complex and interactive web applications but also sets a new benchmark in integrating advanced frontend technologies to deliver an unprecedented user experience in both functionality and visual impact.
 
