@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground de Físicas Realistas Avanzado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="canvas-container">
+        <div id="controls" class="glow">
+            <h3 style="margin-bottom: 15px; color: #00ff88;">🎮 Controles de Física</h3>
+
+            <div class="control-group">
+                <label>Gravedad: <span id="gravity-value">-9.8</span> m/s²</label>
+                <input type="range" id="gravity-slider" min="-20" max="0" value="-9.8" step="0.1">
+            </div>
+
+            <div class="control-group">
+                <label>Rebote: <span id="bounce-value">0.7</span></label>
+                <input type="range" id="bounce-slider" min="0" max="1" value="0.7" step="0.1">
+            </div>
+
+            <div class="control-group">
+                <label>Fricción: <span id="friction-value">0.5</span></label>
+                <input type="range" id="friction-slider" min="0" max="1" value="0.5" step="0.1">
+            </div>
+
+            <h3 style="margin-top: 20px; margin-bottom: 10px; color: #00ff88;">✨ Propiedades del Material</h3>
+            <div class="control-group">
+                <label>Rugosidad: <span id="roughness-value">0.5</span></label>
+                <input type="range" id="roughness-slider" min="0" max="1" value="0.5" step="0.01">
+            </div>
+            <div class="control-group">
+                <label>Metalidad: <span id="metalness-value">0.5</span></label>
+                <input type="range" id="metalness-slider" min="0" max="1" value="0.5" step="0.01">
+            </div>
+            <div class="control-group">
+                <label>Capa Clara: <span id="clearcoat-value">0.0</span></label>
+                <input type="range" id="clearcoat-slider" min="0" max="1" value="0.0" step="0.01">
+            </div>
+            <div class="control-group">
+                <label>Rugosidad Capa Clara: <span id="clearcoat-roughness-value">0.0</span></label>
+                <input type="range" id="clearcoat-roughness-slider" min="0" max="1" value="0.0" step="0.01">
+            </div>
+
+
+            <h3 style="margin-top: 20px; margin-bottom: 10px; color: #00ff88;">➕ Añadir Figuras</h3>
+            <div class="control-group">
+                <button onclick="addSphere()">🔮 Agregar Esfera</button>
+                <button onclick="addCube()">📦 Agregar Cubo</button>
+                <button onclick="addCylinder()">🥫 Agregar Cilindro</button>
+                <button onclick="addTorus()">🍩 Agregar Toro</button>
+                <button onclick="addDodecahedron()">💎 Agregar Dodecaedro</button>
+                <button onclick="addIcosahedron()">✨ Agregar Icosaedro</button>
+            </div>
+
+            <h3 style="margin-top: 20px; margin-bottom: 10px; color: #00ff88;">⚙️ Acciones de Escena</h3>
+            <div class="control-group">
+                <button onclick="resetScene()">🔄 Reiniciar Escena</button>
+                <button onclick="togglePause()">⏸️ Pausar/Continuar</button>
+                <button onclick="explode()">💥 Explosión</button>
+            </div>
+
+            <h3 style="margin-top: 20px; margin-bottom: 10px; color: #00ff88;">🗺️ Cambiar Mapa</h3>
+            <div class="control-group">
+                <button onclick="switchScene('default')">🌐 Escena por Defecto</button>
+                <button onclick="switchScene('grid')">📏 Mundo de Cuadrícula</button>
+            </div>
+        </div>
+
+        <div id="info">
+            <strong>🎯 Instrucciones:</strong><br>
+            • Haz clic para agregar objetos<br>
+            • Arrastra objetos para aplicar fuerza<br>
+            • Rueda del mouse para zoom (OrbitControls)<br>
+            • Clic izquierdo y arrastrar para rotar (OrbitControls)<br>
+            • Clic derecho y arrastrar para panear (OrbitControls)<br>
+            • Ajusta la física y materiales en tiempo real
+        </div>
+
+        <div id="stats">
+            <div>FPS: <span id="fps">60</span></div>
+            <div>Objetos: <span id="object-count">0</span></div>
+            <div>Tiempo: <span id="time">0.0</span>s</div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

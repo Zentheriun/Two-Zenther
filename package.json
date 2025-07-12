@@ -1,0 +1,24 @@
+{
+  "name": "two-zenther",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zentheriun/Two-Zenther.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zentheriun/Two-Zenther/issues"
+  },
+  "homepage": "https://github.com/Zentheriun/Two-Zenther#readme",
+  "description": "",
+  "dependencies": {
+    "three": "^0.178.0",
+    "vite": "^7.0.4"
+  }
+}
