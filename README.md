@@ -113,8 +113,8 @@ This project not only showcases the ability to build highly complex and interact
 ### Steps
 
 ```bash
-git clone https://github.com/Zentheriun/Zenther-II.git
-cd Zenther-II
+git clone https://github.com/Zentheriun/ZENTHER-II.git
+cd ZENTHER-II
 npm install
 npm run dev
 ```
@@ -125,7 +125,7 @@ Access in your browser at `http://localhost:5173`.
 
 ## 🌐 Live Demo
 
-👉 [https://zenther-ii.netlify.app/](https://two-zenther.netlify.app/)
+👉 [https://ZENTHER-II.netlify.app/](https://two-zenther.netlify.app/)
 
 ---
 
