@@ -125,7 +125,7 @@ Access in your browser at `http://localhost:5173`.
 
 ## 🌐 Live Demo
 
-👉 [https://ZENTHER-II.netlify.app/](https://two-zenther.netlify.app/)
+👉 [https://ZENTHER-II.netlify.app/](https://zenther-ll.netlify.app/)
 
 ---
 
